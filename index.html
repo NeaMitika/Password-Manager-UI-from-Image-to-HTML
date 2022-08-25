@@ -142,119 +142,85 @@
 
                 <h2 class="titolo">Tutte le password <span class="pillola">3</span></h2> 
 
-                <div class="contenitore-tutte-le-password">
-                  <div class="riga-dei-titoli">
-                    <div class="colonna-titolo">Sitoweb</div>
-                    <div class="colonna-titolo">Categorie</div>
-                    <div class="colonna-titolo">Nome Utente</div>
-                    <div class="colonna-titolo">Password</div>
-                    <div class="colonna-titolo">Vulnerabilità</div>
-                  </div>
-
-                  <div class="riga-del-servizio">
-                    <div class="colonna-sitoweb">
-                        <div class="icon">
-                            <i><i class="fa-brands fa-google"></i></i>
-                        </div>
-                        <div class="nome-url">
-                            <div class="nome">
-                                <p>Google Account</p>
-                            </div>
-                            <div class="url">
-                                <a href="https://www.google.com">www.google.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="colonna-categoria">
-                        <span class="pillola-viola"><a href="#">Account Google</a></span>
-                        <span class="pillola-verde"><a href="#">Personale</a></span>
-                        <span class="pillola-viola"><a href="#">Principale</a></span>
-                        <span class="pillola-gialla"><a href="#">Google</a></span>
-                    </div>
-                    <div class="colonna-nome-utente">
-                        <span class="nome-utente">nome@gmail.com<i class="fa-regular fa-copy icona"></i></span>
-                    </div>
-                    <div class="colonna-password">
-                        <span class="password">*********<div><i class="fa-regular fa-eye icona"></i> <i class="fa-regular fa-copy icona"></i> </div></span>
-                    </div>
-                    <div class="colonna-vulnerabilita">
-                        <div style="width:100%; background-color:#44464e;">
-                            <div class="vulnerabilita-alta" style="height:10px;width:90%"></div>
-                        </div>
-                        
-                        <span>90%</span>
-                    </div>
-                  </div>
-
-                  <div class="riga-del-servizio">
-                    <div class="colonna-sitoweb">
-                        <div class="icon">
-                            <i class="fa-solid fa-film"></i>
-                        </div>
-                        <div class="nome-url">
-                            <div class="nome">
-                                <p>Netflix</p>
-                            </div>
-                            <div class="url">
-                                <a href="https://www.netflix.com">www.netflix.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="colonna-categoria">
-                        <span class="pillola-viola"><a href="#">Netflix</a></span>
-                        <span class="pillola-verde"><a href="#">Personale</a></span>
-                        <span class="pillola-gialla"><a href="#">Tempo libero</a></span>
-                    </div>
-                    <div class="colonna-nome-utente">
-                        <span class="nome-utente">nome@gmail.com<i class="fa-regular fa-copy icona"></i></span>
-                    </div>
-                    <div class="colonna-password">
-                        <span class="password">*********<div><i class="fa-regular fa-eye icona"></i> <i class="fa-regular fa-copy icona"></i> </div></span>
-                    </div>
-                    <div class="colonna-vulnerabilita">
-                        <div style="width:100%; background-color:#44464e;">
-                            <div class="vulnerabilita-alta" style="height:10px;width:90%"></div>
-                        </div>
-                        
-                        <span>90%</span>
-                    </div>
-                  </div>
-
-                  <div class="riga-del-servizio">
-                    <div class="colonna-sitoweb">
-                        <div class="icon">
-                            <i class="fa-brands fa-unsplash"></i>
-                        </div>
-                        <div class="nome-url">
-                            <div class="nome">
-                                <p>Unsplash</p>
-                            </div>
-                            <div class="url">
-                                <a href="https://www.unsplash.com">www.unsplash.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="colonna-categoria">
-                        <span class="pillola-viola"><a href="#">Account Unsplash</a></span>
-                        <span class="pillola-verde"><a href="#">Personale</a></span>
-                        <span class="pillola-viola"><a href="#">Principale</a></span>
-                        <span class="pillola-gialla"><a href="#">Google</a></span>
-                    </div>
-                    <div class="colonna-nome-utente">
-                        <span class="nome-utente">nome@gmail.com<i class="fa-regular fa-copy icona"></i></span>
-                    </div>
-                    <div class="colonna-password">
-                        <span class="password">*********<div><i class="fa-regular fa-eye icona"></i> <i class="fa-regular fa-copy icona"></i> </div></span>
-                    </div>
-                    <div class="colonna-vulnerabilita">
-                        <div style="width:100%; background-color:#44464e;">
-                            <div class="vulnerabilita-alta" style="height:10px;width:90%"></div>
-                        </div>
-                        
-                        <span>90%</span>
-                    </div>
-                  </div>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="colonna-titolo">Sito web</th>
+                            <th class="colonna-titolo">Categorie</th>
+                            <th class="colonna-titolo">Nome utene</th>
+                            <th class="colonna-titolo">Password</th>
+                            <th class="colonna-titolo">Vulnerabilità</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title="Sito web" class="colonna-sitoweb">
+                                <div class="icon">
+                                    <i><i class="fa-brands fa-google"></i></i>
+                                </div>
+                                <div class="nome-url">
+                                    <div class="nome">
+                                        <p>Google Account</p>
+                                    </div>
+                                    <div class="url">
+                                        <a href="https://www.google.com">www.google.com</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Categorie" class="colonna-categoria">
+                                <span class="pillola-viola"><a href="#">Account Google</a></span>
+                                <span class="pillola-verde"><a href="#">Personale</a></span>
+                                <span class="pillola-viola"><a href="#">Principale</a></span>
+                                <span class="pillola-gialla"><a href="#">Google</a></span>
+                            </td>
+                            <td data-title="Nome utene" class="colonna-nome-utente">
+                                <span class="nome-utente">nome@gmail.com<i class="fa-regular fa-copy icona"></i></span>
+                            </td>
+                            <td data-title="Password" class="colonna-password">
+                                <span class="password">*********<div><i class="fa-regular fa-eye icona"></i> <i class="fa-regular fa-copy icona"></i> </div></span>
+                            </td>
+                            <td data-title="Vulnerabilità" class="colonna-vulnerabilita">
+                                <div style="width:100%; background-color:#44464e;">
+                                    <div class="vulnerabilita-alta" style="height:10px;width:90%"></div>
+                                </div>                        
+                                <span>90%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Sito web" class="colonna-sitoweb">
+                                <div class="icon">
+                                    <i><i class="fa-brands fa-google"></i></i>
+                                </div>
+                                <div class="nome-url">
+                                    <div class="nome">
+                                        <p>Google Account</p>
+                                    </div>
+                                    <div class="url">
+                                        <a href="https://www.google.com">www.google.com</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Categorie" class="colonna-categoria">
+                                <span class="pillola-viola"><a href="#">Account Google</a></span>
+                                <span class="pillola-verde"><a href="#">Personale</a></span>
+                                <span class="pillola-viola"><a href="#">Principale</a></span>
+                                <span class="pillola-gialla"><a href="#">Google</a></span>
+                            </td>
+                            <td data-title="Nome utene" class="colonna-nome-utente">
+                                <span class="nome-utente">nome@gmail.com<i class="fa-regular fa-copy icona"></i></span>
+                            </td>
+                            <td data-title="Password" class="colonna-password">
+                                <span class="password">*********<div><i class="fa-regular fa-eye icona"></i> <i class="fa-regular fa-copy icona"></i> </div></span>
+                            </td>
+                            <td data-title="Vulnerabilità" class="colonna-vulnerabilita">
+                                <div style="width:100%; background-color:#44464e;">
+                                    <div class="vulnerabilita-alta" style="height:10px;width:90%"></div>
+                                </div>                        
+                                <span>90%</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
 
