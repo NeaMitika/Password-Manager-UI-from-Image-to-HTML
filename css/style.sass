@@ -7,19 +7,35 @@
   font-family: Inter
   src: url('/webfonts/Inter-Variable.ttf')
 
+// Variabili dei colori
 
-// Modifico classi del gliderJS
+$nero-scuro: #18191D
+$nero-medio: #212226
+$nero-chiaro: #26272B
+
+$grigio-scuro: #606678
+$grigio-medio: #BBBFC6
+$grigio-chiaro: #D4D4DA
+
+$verde-scuro: #34986E
+$verde-chiaro: #ACD656
+$viola: #7949C0
+$giallo: #E5AF11
+$azzurro: #53A2CE
+$rosso: #B32F30
+$blu: #3C3BFF
+
+// Classi del gliderJS
 
 .glider-track
     gap: 10px
 
-
 body
-    background-color:#18191d
+    background-color: $nero-scuro
     font-family: inter
 
     .titolo
-        color: #c9c9c9
+        color: $grigio-chiaro
         font-variation-settings: "wght" 200
         font-size: 17px
         letter-spacing: 1px
@@ -33,7 +49,7 @@ body
 
     .nagivazione
         grid-area: 1 / 1 / 6 / 2
-        background-color:#212226
+        background-color: $nero-medio
         position: fixed
         height: 100vh
         width: 300px
@@ -63,7 +79,7 @@ body
             .pulsante-aggiunti-password
                 text-align: center
                 display: block
-                background: #8300e3
+                background: $blu
                 padding: 20px 30px
                 width: inherit
                 margin-top: 60px
@@ -72,7 +88,7 @@ body
                 bottom: 40px
                 a
                     text-decoration: none
-                    color: #e4e4e4
+                    color: $grigio-chiaro
                     font-variation-settings: "wght" 600
 
     .contenuto
@@ -87,15 +103,15 @@ body
                 padding: 10px
                 border-top-left-radius: 5px
                 border-bottom-left-radius: 5px
-                background-color: #2a2b2f
-                color: #585c67
+                background-color: $nero-chiaro
+                color: $grigio-medio
 
             .pulsante-icona-cerca
                 padding: 10px
-                background-color: #2a2b2f
+                background-color: $nero-chiaro
                 border-top-right-radius: 5px
                 border-bottom-right-radius: 5px
-                color: #585c67
+                color: $grigio-scuro
 
         .password-piu-usate
             padding: 40px 0px
@@ -135,124 +151,132 @@ body
                                 position: relative
                                 color: white
                                 font-size: 12px
-                                color: #b8b8b8                            
+                                color: $grigio-medio                           
                             .pass
                                 position: relative
                                 color: white
                                 margin-top: 10px
                                 font-size: 10px
                                 letter-spacing: 5px
-        
-        .contenitore-tutte-le-password
-            color: white
-
-            .riga-dei-titoli
-                display: flex
-                justify-content: space-between
-                padding: 30px
-                background: #26272b
-
-                .colonna-titolo
-                    width: clamp(100px, 200px, 250px)
-                    font-size: 13px
-                    font-variation-settings: "wght" 700
-                    color: #646774
-
-            .riga-del-servizio
-                display: flex
-                justify-content: space-between
-                align-items: center
-                padding: 30px
-                background: #212226
-                border-bottom: 1px solid #35373c
-
-                [class*="colonna-"]
-                    width: clamp(100px, 200px, 250px)
-
-                .colonna-sitoweb
-                    display: flex
-                    gap: 20px
-                    align-items: center
-
-                    .icon
-                        background: #4086f4
-                        padding: 25px
-                        border-radius: 10px
-
-                    .nome-url
-                        display: flex
-                        flex-direction: column
-
-                        .nome
-                            color: #cbcbcb
-                            font-variation-settings: "wght" 700
-                            font-size: 14px
-
-                        .url a 
-                            color: #595c68
-                            font-size: 14px
-                .colonna-categoria
-                    display: flex
-                    align-items: center
-                    flex-wrap: wrap
-                    span
-                        background: #2f3036
-                        padding: 10px
-                        border-radius: 15px
-                        text-decoration: none
-                        font-size: 11px
-                        display: inline-block
-                        margin: 2px 2px
-                                        
-                    .pillola
-                        color: white
-                        &-viola a
-                            color: #cfb0ff
-                            text-decoration: none
-                            font-variation-settings: "wght" 700
-                        &-verde a
-                            color: #4ad59c
-                            text-decoration: none
-                            font-variation-settings: "wght" 700
-                        &-gialla a
-                            color: #ecb71a
-                            text-decoration: none
-                            font-variation-settings: "wght" 700
+        .tutte-le-password
+            .pillola
+                background: $nero-chiaro
+                padding: 5px
+                border-radius: 15px
+                text-decoration: none
+                font-size: 11px
+                display: inline-block
                 
-                .colonna-nome-utente
-                    .nome-utente
-                        display: flex
-                        justify-content: space-between
-                        font-size: 15px
-                        color: #aeaeae
-                        font-variation-settings: "wght" 500
-                        .icona
-                            font-size: 20px
-            
-                .colonna-password
-                    .password
-                        display: flex
-                        justify-content: space-between
-                        font-size: 15px
-                        color: #aeaeae
-                        font-variation-settings: "wght" 500
-                        .icona
-                            font-size: 20px
-                            &:nth-child(1)
-                                margin-right: 10px
+            .contenitore-tutte-le-password
+                color: white
 
-                .colonna-vulnerabilita
+                .riga-dei-titoli
                     display: flex
-                    justify-content: space-evenly
-                    align-items: center
+                    justify-content: space-between
+                    padding: 30px
+                    background: $nero-chiaro
 
-                    .vulnerabilita
-                        background: red
-                        &-alta 
-                            background: #b22f30
-                        
-                    span
-                        margin-left: 20px
+                    .colonna-titolo
+                        width: clamp(100px, 200px, 250px)
                         font-size: 15px
-                        color: #aeaeae
-                        font-variation-settings: "wght" 500
+                        font-variation-settings: "wght" 700
+                        color: $grigio-scuro
+
+                .riga-del-servizio
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    padding: 30px
+                    background: $nero-medio
+                    border-bottom: 1px solid $nero-chiaro
+
+                    [class*="colonna-"]
+                        width: clamp(100px, 200px, 250px)
+
+                    .colonna-sitoweb
+                        display: flex
+                        gap: 20px
+                        align-items: center
+
+                        .icon
+                            background: $blu
+                            padding: 25px
+                            border-radius: 10px
+
+                        .nome-url
+                            display: flex
+                            flex-direction: column
+
+                            .nome
+                                color: $grigio-chiaro
+                                font-variation-settings: "wght" 700
+                                font-size: 14px
+
+                            .url a 
+                                color: $grigio-scuro
+                                font-size: 14px
+                    .colonna-categoria
+                        display: flex
+                        align-items: center
+                        flex-wrap: wrap
+                        span
+                            background: $nero-chiaro
+                            padding: 10px
+                            border-radius: 15px
+                            text-decoration: none
+                            font-size: 11px
+                            display: inline-block
+                            margin: 2px 2px
+                                            
+                        .pillola
+                            color: white
+                            &-viola a
+                                color: $viola
+                                text-decoration: none
+                                font-variation-settings: "wght" 700
+                            &-verde a
+                                color: $verde-scuro
+                                text-decoration: none
+                                font-variation-settings: "wght" 700
+                            &-gialla a
+                                color: $giallo
+                                text-decoration: none
+                                font-variation-settings: "wght" 700
+                    
+                    .colonna-nome-utente
+                        .nome-utente
+                            display: flex
+                            justify-content: space-between
+                            font-size: 15px
+                            color: $grigio-medio
+                            font-variation-settings: "wght" 500
+                            .icona
+                                font-size: 20px
+                
+                    .colonna-password
+                        .password
+                            display: flex
+                            justify-content: space-between
+                            font-size: 15px
+                            color: $grigio-medio
+                            font-variation-settings: "wght" 500
+                            .icona
+                                font-size: 20px
+                                &:nth-child(1)
+                                    margin-right: 10px
+
+                    .colonna-vulnerabilita
+                        display: flex
+                        justify-content: space-evenly
+                        align-items: center
+
+                        .vulnerabilita
+                            background: red
+                            &-alta 
+                                background: $rosso
+                            
+                        span
+                            margin-left: 20px
+                            font-size: 15px
+                            color: $grigio-medio
+                            font-variation-settings: "wght" 500
