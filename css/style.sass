@@ -30,9 +30,13 @@ $blu: #3C3BFF
 .glider-track
     gap: 10px
 
+.vedi-non-vedi
+    display: none
+
 body
     background-color: $nero-scuro
     font-family: inter
+    overflow-x: clip
 
     .titolo
         color: $grigio-chiaro
@@ -42,21 +46,62 @@ body
         padding: 20px 0px
 
     .contenitore
-        display: grid
-        grid-template-columns: 300px 1fr
-        grid-template-rows: repeat(2, 1fr)
+        width: auto
+
+    .nagivazione-mobile
+        display: none
+        background-color: #212226
+        position: fixed
         height: 100vh
+        width: 300px
+        z-index: 1
+
+        .contenitore-navigazione
+            padding: 30px 30px 0px 30px
+            display: flex
+            flex-direction: column
+
+            .logo  
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                span
+                    font-size: 30px
+                    color: white
+                    font-variation-settings: "wght" 700
+                    display: flex
+                    flex-direction: column
+
+                    small
+                        font-size: 15px
+                        font-variation-settings: "wght" 400
+
+            .pulsante-aggiunti-password
+                text-align: center
+                display: block
+                background: $blu
+                padding: 20px 30px
+                width: inherit
+                margin-top: 60px
+                border-radius: 10px
+                position: fixed
+                bottom: 40px
+                a
+                    text-decoration: none
+                    color: $grigio-chiaro
+                    font-variation-settings: "wght" 600
 
     .nagivazione
-        grid-area: 1 / 1 / 6 / 2
         background-color: $nero-medio
         position: fixed
         height: 100vh
         width: 300px
+        z-index: 1
+
 
         .contenitore-navigazione
             padding: 30px 30px 0px 30px
-            height: 100vh
             display: flex
             flex-direction: column
 
@@ -92,8 +137,8 @@ body
                     font-variation-settings: "wght" 600
 
     .contenuto
-        grid-area: 1 / 2 / 6 / 6
-        margin: 30px
+        margin-left: 300px
+        padding: 30px 30px 0px 30px
 
         .barra-ricerca
             display: flex
@@ -112,6 +157,18 @@ body
                 border-top-right-radius: 5px
                 border-bottom-right-radius: 5px
                 color: $grigio-scuro
+        
+        .pulsante-menu
+            .icona
+                color: $grigio-chiaro
+                font-size: 30px
+                display: flex
+                align-items: center
+                justify-content: center
+                padding-left: 30px
+                display: none
+            &:hover 
+                cursor: pointer
 
         .password-piu-usate
             padding: 40px 0px
@@ -171,6 +228,9 @@ body
                 width: 100%
                 color: white
                 border-spacing: unset
+                display: block
+                overflow-x: auto
+                white-space: nowrap
 
                 thead
                     background: #26272b
@@ -193,7 +253,8 @@ body
 
                         td
                             padding: 30px
-                            width: 200px
+                            width: 20%
+                            white-space: normal
 
                         .colonna-sitoweb
                             display: flex
@@ -268,6 +329,8 @@ body
                             display: flex
                             justify-content: space-evenly
                             align-items: center
+                            width: auto
+
 
                             .vulnerabilita
                                 background: red
@@ -304,8 +367,17 @@ body
         .contenitore
             display: block
         
+        .nagivazione-mobile
+            display: block
+            
+        
         .contenuto
-            margin: 20px !important
+            margin: unset
+
+            .pulsante-menu
+                .icona  
+                    display: block  
+            
 
     table, thead, tbody, th, td,tr
         display: block
@@ -333,3 +405,16 @@ body
 
     td:before
         // content: attr(data-title) questo forse meglio non metterlo
+
+@include tablet
+
+    body
+        .nagivazione
+            display: none
+
+        .contenuto
+            margin-left: unset
+
+            .pulsante-menu
+                .icona  
+                    display: block  

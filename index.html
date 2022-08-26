@@ -8,10 +8,27 @@
     <link rel="stylesheet" type="text/css" href="./css/style.min.css?v=1.0.0">
     <link rel="stylesheet" type="text/css" href="./css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./css/glider.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
 </head>
 <body>
 
     <div class="contenitore">
+
+        <div class="nagivazione-mobile animate__animated animate__slideOutLeft">
+
+            <div class="contenitore-navigazione">
+
+                <div class="logo">
+                    <img src="/pass.man/img/logo.svg" alt="" width="50px"> <span> PASS:MAN <small>#nontiscordardime</small> </span>
+                </div>
+    
+                <div class="pulsante-aggiunti-password">
+                    <a href="#">AGGIUNGI PASSWORD</a>
+                </div>
+
+            </div>            
+
+        </div>
 
         <div class="nagivazione">
 
@@ -29,12 +46,30 @@
 
         </div>
 
+        <div class="nagivazione animate__animated">
+
+            <div class="contenitore-navigazione">
+
+                <div class="logo">
+                    <img src="/pass.man/img/logo.svg" alt="" width="50px"> <span> PASS:MAN <small>#nontiscordardime</small> </span>
+                </div>
+    
+                <div class="pulsante-aggiunti-password">
+                    <a href="#">AGGIUNGI PASSWORD</a>
+                </div>
+
+            </div>            
+
+        </div>
+
         <div class="contenuto">
 
-            <div class="barra-ricerca">
+            <div class="contenitore barra-ricerca pulsante-menu">
 
                 <input type="search" name="" id="" class="input-barra-ricerca" placeholder="Cosa stai cercando?">
                 <button type="submit" class="pulsante-icona-cerca"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                <i class="fa-solid fa-bars icona" onclick="ToggleNavigazione()"></i>
 
             </div>
 
