@@ -14,13 +14,15 @@ const navigazione = document.querySelector('.nagivazione-mobile');
 function ToggleNavigazione() {
 
     if (navigazione.classList.contains('animate__slideOutLeft')) {
-
+        
+        navigazione.style.display = 'block';
         navigazione.classList.add('animate__slideInLeft');
         navigazione.classList.remove('animate__slideOutLeft');
 
       } else if (navigazione.classList.contains('animate__slideInLeft')) {
 
         navigazione.classList.add('animate__slideOutLeft');
+        navigazione.style.display = 'block';
 
       } else {
 
