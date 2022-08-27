@@ -7,6 +7,22 @@
   font-family: Inter
   src: url('/pass.man/webfonts/Inter-Variable.ttf')
 
+//mixin per responsive
+
+@mixin mobile
+    @media (max-width: #{767px}) 
+        @content
+
+
+@mixin tablet 
+    @media (min-width: #{768px}) and (max-width: #{1024px - 1px}) 
+        @content
+
+
+@mixin desktop 
+    @media (min-width: #{1024px}) 
+        @content
+
 // Variabili dei colori
 
 $nero-scuro: #18191D
@@ -48,6 +64,10 @@ body
     .contenitore
         width: auto
 
+        @include mobile
+            display: block
+        
+
     .nagivazione-mobile
         display: none
         background-color: #212226
@@ -55,6 +75,9 @@ body
         height: 100%
         width: 300px
         z-index: 1
+
+        @include mobile
+            display: block
 
         .contenitore-navigazione
             padding: 30px 30px 0px 30px
@@ -99,6 +122,13 @@ body
         width: 300px
         z-index: 1
 
+        @include mobile
+            display: none
+
+        @include tablet
+            display: none
+            
+
 
         .contenitore-navigazione
             padding: 30px 30px 0px 30px
@@ -138,7 +168,15 @@ body
 
     .contenuto
         margin-left: 300px
-        padding: 30px 30px 0px 30px
+        padding: 30px
+
+        @include mobile
+            margin: unset
+            padding: 20px
+
+        @include tablet
+            margin-left: unset
+    
 
         .barra-ricerca
             display: flex
@@ -168,6 +206,13 @@ body
                 justify-content: center
                 padding-left: 30px
                 display: none
+
+                @include mobile
+                    display: block  
+
+                @include tablet
+                    display: block  
+
             &:hover 
                 cursor: pointer
 
@@ -233,13 +278,25 @@ body
                 overflow-x: auto
                 white-space: nowrap
 
+                @include mobile
+                    display: block
+
                 thead
                     background: #26272b
                     height: 70px
+
+                    @include mobile
+                        display: none
                     tr
+                        @include mobile
+                            display: block
+
                         th
                             text-align: left
                             padding: 30px
+                        
+                            @include mobile
+                                display: block
 
                         .colonna-titolo
                             font-size: 15px
@@ -247,15 +304,38 @@ body
                             color: $grigio-scuro
 
                 tbody
+                    @include mobile
+                        display: block
 
                     tr
                         border-bottom: 1px solid $nero-chiaro
                         background: #212226
 
+                        @include mobile
+                            display: block
+                            margin-bottom: 40px
+
                         td
                             padding: 30px
                             width: 20%
                             white-space: normal
+
+                            @include mobile
+                                display: block
+                                order-bottom: 1px solid #373737
+                                position: relative
+                                // padding-left: 30% !important tolto questo perchè ho tolto anche attr(data-title) da td:before
+                                // content: attr(data-title) questo forse meglio non metterlo
+                                white-space: normal
+                                text-align: left
+                                width: unset !important
+
+                            &:before
+                                position: absolute
+                                left: 20px
+                                font-size: 15px
+                                font-variation-settings: "wght" 500
+                                color: #606678
 
                         .colonna-sitoweb
                             display: flex
@@ -343,79 +423,3 @@ body
                                 font-size: 15px
                                 color: $grigio-medio
                                 font-variation-settings: "wght" 500
-
-@mixin mobile
-    @media (max-width: #{767px}) 
-        @content
-
-
-@mixin tablet 
-    @media (min-width: #{768px}) and (max-width: #{1024px - 1px}) 
-        @content
-
-
-@mixin desktop 
-    @media (min-width: #{1024px}) 
-        @content
-
-
-@include mobile
-
-    body
-        .nagivazione
-            display: none
-
-        .contenitore
-            display: block
-        
-        .nagivazione-mobile
-            display: block
-            
-        
-        .contenuto
-            margin: unset
-
-            .pulsante-menu
-                .icona  
-                    display: block  
-            
-
-    table, thead, tbody, th, td,tr
-        display: block
-
-    thead
-        display: none
-
-    tr
-        margin-bottom: 40px
-
-    td
-        border-bottom: 1px solid #373737
-        position: relative
-        // padding-left: 30% !important tolto questo perchè ho tolto anche attr(data-title) da td:before
-        white-space: normal
-        text-align: left
-        width: unset !important
-    
-    td:before
-        position: absolute
-        left: 20px
-        font-size: 15px
-        font-variation-settings: "wght" 500
-        color: #606678
-
-    td:before
-        // content: attr(data-title) questo forse meglio non metterlo
-
-@include tablet
-
-    body
-        .nagivazione
-            display: none
-
-        .contenuto
-            margin-left: unset
-
-            .pulsante-menu
-                .icona  
-                    display: block  
